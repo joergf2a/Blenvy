@@ -15431,44 +15431,11 @@
       "type": "object",
       "typeInfo": "Struct"
     },
-    "blenvy_animation_example::Fox": {
+    "blenvy_blueprints_example::component_examples::BasicTest": {
       "additionalProperties": false,
       "isComponent": true,
       "isResource": false,
-      "long_name": "blenvy_animation_example::Fox",
-      "properties": {},
-      "required": [],
-      "short_name": "Fox",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "blenvy_animation_example::Player": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "blenvy_animation_example::Player",
-      "properties": {},
-      "required": [],
-      "short_name": "Player",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "blenvy_animation_example::Robot": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "blenvy_animation_example::Robot",
-      "properties": {},
-      "required": [],
-      "short_name": "Robot",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "blenvy_animation_example::component_examples::BasicTest": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "blenvy_animation_example::component_examples::BasicTest",
+      "long_name": "blenvy_blueprints_example::component_examples::BasicTest",
       "properties": {
         "a": {
           "type": {
@@ -15495,10 +15462,10 @@
       "type": "object",
       "typeInfo": "Struct"
     },
-    "blenvy_animation_example::component_examples::EnumTest": {
+    "blenvy_blueprints_example::component_examples::EnumTest": {
       "isComponent": true,
       "isResource": false,
-      "long_name": "blenvy_animation_example::component_examples::EnumTest",
+      "long_name": "blenvy_blueprints_example::component_examples::EnumTest",
       "oneOf": [
         "Metal",
         "Wood",
@@ -15511,11 +15478,11 @@
       "type": "string",
       "typeInfo": "Enum"
     },
-    "blenvy_animation_example::component_examples::TupleTest2": {
+    "blenvy_blueprints_example::component_examples::TupleTest2": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleTest2",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleTest2",
       "prefixItems": [
         {
           "type": {
@@ -15537,11 +15504,11 @@
       "type": "array",
       "typeInfo": "TupleStruct"
     },
-    "blenvy_animation_example::component_examples::TupleTestBool": {
+    "blenvy_blueprints_example::component_examples::TupleTestBool": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleTestBool",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleTestBool",
       "prefixItems": [
         {
           "type": {
@@ -15553,11 +15520,11 @@
       "type": "array",
       "typeInfo": "TupleStruct"
     },
-    "blenvy_animation_example::component_examples::TupleTestColor": {
+    "blenvy_blueprints_example::component_examples::TupleTestColor": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleTestColor",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleTestColor",
       "prefixItems": [
         {
           "type": {
@@ -15569,11 +15536,11 @@
       "type": "array",
       "typeInfo": "TupleStruct"
     },
-    "blenvy_animation_example::component_examples::TupleTestF32": {
+    "blenvy_blueprints_example::component_examples::TupleTestF32": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleTestF32",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleTestF32",
       "prefixItems": [
         {
           "type": {
@@ -15585,11 +15552,11 @@
       "type": "array",
       "typeInfo": "TupleStruct"
     },
-    "blenvy_animation_example::component_examples::TupleTestStr": {
+    "blenvy_blueprints_example::component_examples::TupleTestStr": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleTestStr",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleTestStr",
       "prefixItems": [
         {
           "type": {
@@ -15601,11 +15568,11 @@
       "type": "array",
       "typeInfo": "TupleStruct"
     },
-    "blenvy_animation_example::component_examples::TupleTestU64": {
+    "blenvy_blueprints_example::component_examples::TupleTestU64": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleTestU64",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleTestU64",
       "prefixItems": [
         {
           "type": {
@@ -15617,11 +15584,11 @@
       "type": "array",
       "typeInfo": "TupleStruct"
     },
-    "blenvy_animation_example::component_examples::TupleVec": {
+    "blenvy_blueprints_example::component_examples::TupleVec": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleVec",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleVec",
       "prefixItems": [
         {
           "type": {
@@ -15633,11 +15600,11 @@
       "type": "array",
       "typeInfo": "TupleStruct"
     },
-    "blenvy_animation_example::component_examples::TupleVec2": {
+    "blenvy_blueprints_example::component_examples::TupleVec2": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleVec2",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleVec2",
       "prefixItems": [
         {
           "type": {
@@ -15649,11 +15616,11 @@
       "type": "array",
       "typeInfo": "TupleStruct"
     },
-    "blenvy_animation_example::component_examples::TupleVec3": {
+    "blenvy_blueprints_example::component_examples::TupleVec3": {
       "isComponent": true,
       "isResource": false,
       "items": false,
-      "long_name": "blenvy_animation_example::component_examples::TupleVec3",
+      "long_name": "blenvy_blueprints_example::component_examples::TupleVec3",
       "prefixItems": [
         {
           "type": {
@@ -15664,17 +15631,6 @@
       "short_name": "TupleVec3",
       "type": "array",
       "typeInfo": "TupleStruct"
-    },
-    "blenvy_animation_example::component_examples::UnitTest": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "blenvy_animation_example::component_examples::UnitTest",
-      "properties": {},
-      "required": [],
-      "short_name": "UnitTest",
-      "type": "object",
-      "typeInfo": "Struct"
     },
     "bool": {
       "isComponent": false,

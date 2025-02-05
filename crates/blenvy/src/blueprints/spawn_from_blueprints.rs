@@ -508,24 +508,21 @@ pub(crate) fn blueprints_assets_loaded(
             let animation_index = graph.add_clip(clip.clone(), 1.0, graph.root);
             named_indices.insert(key.to_string(), animation_index);
         }
-        let graph = graphs.add(graph);
+        let graph_handle = AnimationGraphHandle(graphs.add(graph));
 
         //println!("Named animations : {:?}", named_animations.keys());
         //println!("ANIMATION INFOS: {:?}", animation_infos);
 
         commands.entity(entity).insert((
-            SceneBundle {
-                scene: scene.clone(),
-                transform: transforms,
-                ..Default::default()
-            },
+            SceneRoot(scene.clone()),
+            transforms,
             OriginalChildren(original_children),
             BlueprintAnimations {
                 // TODO: perhaps swap this out with InstanceAnimations depending on whether we are spawning a level or a simple blueprint
                 // these are animations specific to the blueprint
                 named_animations,
                 named_indices,
-                graph,
+                graph_handle,
             },
         ));
     }
@@ -709,7 +706,7 @@ pub(crate) fn blueprints_cleanup_spawned_scene(
         }
 
         // copy components into from blueprint instance's blueprint_root_entity to original entity
-        commands.add(CopyComponents {
+        commands.queue(CopyComponents {
             source: blueprint_root_entity,
             destination: original,
             exclude: vec![TypeId::of::<Parent>(), TypeId::of::<Children>()],
@@ -743,7 +740,10 @@ pub(crate) fn blueprints_cleanup_spawned_scene(
                     let transitions = AnimationTransitions::new();
                     commands
                         .entity(entity_with_player)
-                        .insert((transitions, animations.graph.clone()));
+                        .insert(transitions)
+                        .insert(animations.graph_handle.clone())
+                        ;
+                        //.insert((transitions, animations.graph.clone(),));
                 }
             }
             // FIXME VERY convoluted, but it works
@@ -779,7 +779,7 @@ pub(crate) fn blueprints_cleanup_spawned_scene(
                                             .named_animations
                                             .clone(),
                                         named_indices: original_animations.named_indices.clone(),
-                                        graph: original_animations.graph.clone(),
+                                        graph_handle: original_animations.graph_handle.clone(),
                                     },
                                 ));
                             }
